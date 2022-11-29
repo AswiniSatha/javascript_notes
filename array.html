@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JAVASCRIPT</title>
+    <!-- <script>
+    let v= prompt("enter");
+    document.write(v);
+    console.log(v);
+    </script> -->
+</head>
+<body>
+    <!-- ARRAY function in JS
+        HOW TO DECLARE ARRAY
+        FOR loop
+        FOR OF loop
+        Push AND Pop
+        Shift and Unshift
+        Splice Method
+        Join Method
+        toString Method
+        Subset
+        concat
+        indexof
+        find
+        lastIndexOf
+        Basic Programming
+        Min and Max function
+        Random function 
+        Dynamic Array
+        Slice
+
+    -->
+
+
+
+    <script>
+        // Java script is not compulsion storing same type in array.
+        var id=1;
+        //boolean fun to check the boolean flag 
+        Boolean(1);
+        var fruits=["Apple" , "Banana", "orange", "grapes"];
+        document.write(fruits +"<br/>");
+        var check=["Apple" , "Banana", 34];
+        document.write(check[4]);
+        for(var i=0; i<fruits.length; i++)
+        {
+            document.write(fruits[i] +"<br/>");
+
+        }
+        // for of loop kind of for each loop
+        document.write("For of loop" +"<br/>");
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+        //Push and Pop in Array
+        //Unshift and Shift
+        //Push and Pop element is faster and better time complexity  than shift and unshift because of reindexing the array 
+        fruits.push("html");    // Push is to insert an element at end of the array
+        document.write("After Inserting one element");
+
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+        fruits.push("html","css","gghh");    // Push is to for more element insert at end of the array
+        document.write("After Inserting more element");
+
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+        document.write("After Inserting one element"+"<br/>");
+
+        fruits.unshift("check");    // unshift is to insert an element at begining of the array
+
+        fruits.unshift("asdf","fghj","dfghj");  
+
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+
+        document.write("After pop one element at End" +"<br/>");
+        fruits.pop();
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+
+        document.write("After pop one element at begining" +"<br/>");
+        fruits.shift();
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+        // Splice Method will add or  remove at any index.
+        //arr.splice(startindex,deletecount,elementtobe added);
+        fruits.splice(0,2);
+        document.write("Delete element using splice"+"<br/>");
+
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+
+        fruits.splice(2,0,"java","selenium");
+        document.write("ADD element using splice"+"<br/>");
+
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+        fruits.splice(2,2,"csssss");
+        document.write("Delete and ADD element using splice"+"<br/>");
+
+        for(var x of fruits)
+        {
+            document.write(x + "<br/>");
+        }
+
+        
+        // document.write("Delete all element from 2nd index");
+        // fruits.splice(2);
+
+        // for(var x of fruits)
+        // {
+        //     document.write(x + "<br/>");
+        // }
+    // Print all element as join  in array  with custom separtor 
+         //By default separate by coma
+         document.write(fruits.join() +"<br/>");
+         document.write(fruits.join("-")  +"<br/>");
+
+    // convert array into string .
+    //tostring and join same behaviour but only custom separtor will be used in join 
+        document.write(fruits.toString() +"<br/>");
+
+    //Create Subset  for a array 
+        document.write("create subset from begining");
+        document.write(fruits.slice(1,4)+"<br/>");
+        document.write("create subset from end");
+        document.write(fruits.slice(-1)+"<br/>");
+        document.write(fruits.slice(-3)+"<br/>");
+        //negative(-2) means it will reject 2 element from end
+        document.write(fruits.slice(2,-5)+"<br/>");
+        document.write(fruits.slice(-4,-3)+"<br/>");
+    
+    //concat
+            var persons=["aswwww","ssss","lllll"];
+            var name=["dddd","kkkkk","ssss"];
+            var place=["666","34567","ssss","lllll"];
+            persons.concat(name,place);
+            document.write( persons.concat(name,place)+"<br/>");
+           
+            persons.push("a","ab","b","ab");
+            document.write(persons+"<br/>");
+
+       
+                //Indexof -indexOf() returns the position of the first occurrence of a value in a string or array.
+
+                //indexOf(searchvalue, startindex)
+                document.write(persons.indexOf("ab") +"<br/>");
+                document.write(persons.indexOf("ab",5) +"<br/>");
+
+                //last indexof - method returns the index (position) of the last occurrence of a specified value in a string
+                //The lastIndexOf() method is case sensitive.
+                //it will serach from end to begining
+
+                document.write(persons.lastIndexOf("ab",6)+"<br/>");
+
+                //find
+                //find() returns the value of the first element in an array that passes a test (provided by a function):
+                const ages = [3, 10, 20, 18,19,2];
+
+                document.write(ages.find(checkAge1) + "<br/>");
+                document.write(ages.find(function checkAge(age) {
+                return age > 18;
+                }) + "<br/>")
+
+                document.write(areatrianle(5,6,7) + "<br/>");
+                var year=prompt("enter a leap");
+                document.write(leapyear(year)+"<br/>");
+
+                var no=prompt("Enter any no from 0-9");
+                document.write(randomguest(no)+"<br/>");
+
+                document.write(divisible3_7(no)+"<br/>");
+
+                var per=["asw","aswini","sathandam","satha"];
+                document.write(per.find(checksize) +"<br/>");
+
+                function checksize(per){
+                    return per.length>6;
+                }
+
+                function checkAge1(age) {
+                return age > 18;
+                }
+
+                function areatrianle(s1,s2,s3)
+                {
+                    return 0.5*s1*s2*s3;
+                }
+
+                function leapyear(year)
+                {
+                    if((year%4)==0)
+                    {
+                        return "The given year "+year +"is a LEAP YEAR";
+                    }
+                    else{
+                        return "The given year "+year +"is not a LEAP YEAR";
+
+                    }
+                }
+
+                function randomguest(userno)
+                {
+                    var r=Math.floor(Math.random()*10);
+                    document.write("Random no"+r+"<br/>");
+                    if(r==userno)
+                    {
+                        return "GOOD GUEST";
+                    }
+                    else{
+                        return "BAD GUEST";
+                    }
+
+                }
+
+                function divisible3_7(userno)
+                {
+                    if((userno%3)==0)
+
+                    {
+                        
+                        if((userno%7)==0)
+                        {
+                            return "The No "+userno+" is divisible by 3 and 7";
+                        }
+                        else{return "The No "+userno+" is divisible by 3";}
+                    }
+                    else if((userno%7)==0)
+                    {
+                        return "The No "+userno+" is divisible by 7";
+                    }
+                    else{
+                        return "The No "+userno+" is not  divisible by 7 or 3";
+                    }
+
+                }
+
+                //Min and Max
+                //Sorting work for alphabetical if you want to for number use function(a-b)
+                //To take max and min in array need to use applu and null
+                //The apply() method accepts arguments in an array:
+
+                var number=[3,40,5,66,7,2,1,1,3];
+                document.write(Math.max.apply(null,number)+"<br/>");
+                Math.max.apply(" ", number); // Will also return same as above
+                Math.max.apply(Math, number);// Will also return same as above
+                document.write(Math.min.apply(null,number)+"<br/>");
+                document.write(Math.max(23,34)+"<br/>");
+                document.write(Math.min(45,23)+"<br/>");
+                document.write(number.sort(function(a, b){return a-b}) +"<br/>");
+                document.write(number.reverse(function(a, b){return b-a}) +"<br/>");
+
+                const fruitsort = ["Banana", "Orange", "Apple", "Mango"];
+                document.write(fruitsort.sort() +"<br/>");
+                document.write(fruitsort.reverse() +"<br/>");
+
+            //Dynamic Array
+                var size=prompt("ENter the size of array");
+                var veg=[];
+                for(var j=0; j<size; j++)
+                {
+                    let name11=prompt("enter the "+j+"-element");
+                    veg.push(name11)
+
+                }
+                for(var k=0; k<veg.length; k++ )
+                {
+                    document.write(veg[k] +"<br/>");
+
+                }
+            //slice
+            //When the slice() method is given two arguments, it selects array elements from the start argument, and up to (but not included) the end argument:
+                const fruitsslice = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                const citrus = fruitsslice.slice(1,3);
+                fruitsslice.slice(2);
+
+
+    </script>
+</body>
+</html>

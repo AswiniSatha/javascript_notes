@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<body>
+    <script>
+function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
+    let x;
+if(archerIsAwake==false||knightIsAwake===false)
+{ 
+  if(( archerIsAwake==false)&&  (knightIsAwake===false))
+  {
+    console.log("check");
+    x=false;
+  }
+  else
+  {
+  x=true;
+  }
+}
+else
+{
+  x=true;
+}
+return x;}
+//document.write(canSpy(false,true,false));
+
+let a="'Impatiently waits for \t \t',";
+a.toLowerCase();
+
+document.write(a.trim());
+function backDoorResponse(line) {
+  debugger
+  //line=line.trim();
+  for(let i=0; i<line.length; i++)
+    {
+      line[i]=line[i].trim();
+      line[i]=line[i].slice(-1);
+    }
+  return line;
+  //throw new Error('Remove this line and implement the function');
+}
+const CODE_WORK = [
+'Stands so high   ',
+      '\tHuge hooves too\t',
+      'Impatiently waits for \t \t',
+      '    Reins and harness    ',
+      'Eager to leave\n\n',
+    ];
+//backDoorResponse(CODE_WORK);
+
+let week21 = [2, 0, 1, 4, 1, 3, 0,2,2, 0, 1, 4, 1, 3, 0,2];
+let week=3;
+// debugger
+
+// let ab=new Array();
+// let no=0;
+// for(let k=1; k<=week-1; k++)
+// {
+//   no=no+7;
+// }
+
+ 
+//   ab=week21.splice(no,7);
+  
+//    document.write(ab); 
+let orders = [
+      'Tropical Island',
+      'Energizer',
+      'Limetime',
+      'All or Nothing',
+      'Pure Strawberry Joy',
+    ];
+//remainingOrders(7,orders);
+function remainingOrders(timeLeft, orders) {
+  debugger
+  let total=0,i=0;
+  let remainingorder=new Array();
+let timecalc=0;
+  if(timeLeft>0){
+  for(i=0; i<orders.length; i++)
+    {
+ switch (orders[i]) {
+  case "Pure Strawberry Joy":
+     timecalc=0.5;
+    break;
+  case "Energizer" :
+    timecalc=1.5;
+    break;
+case "Green Garden" :
+    timecalc=1.5;
+    break;
+  case "Tropical Island":
+       timecalc=3;
+       break;
+  case "All or Nothing":
+        timecalc=5;
+        break;
+  default:
+       timecalc=2.5;
+       break;
+ }
+    total=total+timecalc;
+      if(total>=timeLeft)
+      {
+        remainingorder=orders.slice(i+1);
+        return remainingorder;
+        break;
+        
+      }
+    }}
+  return remainingorder;
+  throw new Error('Please implement the remainingOrders function');
+}
+const tickets = {
+  '0H2AZ123': null,
+  '23LA9T41': 'Verena Nardi',
+};
+document.write(ticketStatus(tickets,"23LA9T41"));
+let value='  784  ';
+document.write(typeof(value));
+  let b= revArray.join("");
+  document.write(b);
+function ticketStatus(tickets, ticketId) {
+for(let key in tickets){
+  console.log(key);
+  if(key === ticketId)
+  {
+    console.log(tickets[key]);
+    if(tickets[key]=== null)
+    {
+      return "not sold";
+    }
+    else{return "sold to "+tickets[key]; }
+  }
+  
+  {
+    return "unknown ticket id";
+  }
+}
+
+throw new Error('Please implement the ticketStatus function.');
+}
+
+
+
+    </script>
+</body>

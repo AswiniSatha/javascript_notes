@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Java Script</title>
+    <script>
+        // IF CONDITION
+       /* var age=prompt("Enter your age");
+        if(age>=18)
+        {
+            document.write("You are adult <br/>");
+        }
+        else if(age>0 &&  age<18){
+            document.write("You are minor<br/>"); 
+        }
+        else{
+            // document.write("Please Enter a valid age");
+            alert("Please enter Valid age");
+        }
+        */
+
+        // Time if else using Number
+      /*  var time=prompt("Enter the Current Time in 24hrs Format");
+        if(time>12 && time<17)
+        {
+            document.write("Hello Good Afternoon ! Have a nice day");
+        }
+        else if(time>=17 && time<21)
+        {
+            document.write("Hello Good Evening ! Have a nice day");
+        }
+        else if((time>=21 && time<=24) || (time>0 && time<=6))
+        {
+            document.write("Good Night ! Hava a Good Sleep");
+        }
+        else if(time>6 && time<12)
+        {
+            document.write("Good Morning ! Have a nice day");
+        }
+        else{
+            alert("Please enter valid time");
+        }*/
+
+
+       /* var time=new Date().getHours();
+        d.getFullYear();
+        d.getMonth();
+        setFullYear(2020);
+        if(time>12 && time<17)
+        {
+            document.write("Hello Good Afternoon ! Have a nice day");
+        }
+        else if(time>=17 && time<21)
+        {
+            document.write("Hello Good Evening ! Have a nice day");
+        }
+        else if((time>=21 && time<=24) || (time>0 && time<=6))
+        {
+            document.write("Good Night ! Hava a Good Sleep");
+        }
+        else if(time>6 && time<12)
+        {
+            document.write("Good Morning ! Have a nice day");
+        }
+        else{
+            alert("Please enter valid time");
+        }*/
+
+// convert into integer
+     /*   var a=prompt("Enter First Number");
+        var b=prompt("Enter Second Number");
+        a=parseInt(a);
+        b=parseInt(b);
+         document.write(a +"<br/>");
+         document.write(b);
+        if(a>b)
+        {
+            document.write(a+" is greater than "+b);
+        }
+        else if(b>a){
+            document.write(b + "is greater than"+a);
+        }
+        else if(a==b)
+        {
+            document.write( a +"is equal to "+b);
+        }
+        else{
+            document.write("Enter a valid Numbers");
+        }*/
+
+    
+
+
+   // Arthimetic
+    /* a=10; b=10;
+             sum=a+b;
+             sub=a-b;
+             mul=a*b;
+             div=a/b;
+             rem=a%b;
+            document.write("Addition"+sum);  
+            document.write("SUb"+sub);
+            document.write("Mul"+mul);
+            document.write("div"+div);
+            document.write("rem"+rem);  */    
+            
+
+     // Loop
+
+    //  document.write("First 10 Natural Numbers  are <br/>"); 
+    //  for(let i=0; i<10; i++)
+    //  {
+    //      document.write(i +"<br/>");
+    //  }
+
+    //   document.write("Even Numbers Between 1 and 20 are <br/>"); 
+    //   for(let j=2; j<20; j=j+2)
+    //   {
+    //      document.write(j +"<br/>");
+    //   }
+
+    //   x=prompt("Enter First Number");
+    //   y=prompt("Enter Second Number");
+    //   document.write("Even Numbers Between "+x+" and " +y +" are <br/>"); 
+    //   for(let j=x; j<y; j++)
+    //   {
+    //      if((j%2)==0)
+    //      {
+    //          document.write(j +"<br/>");
+    //      }
+        
+    //   }
+    //Fibo
+    document.write("First 40 Fibonacci Series are <br/>")
+      fibo1=0;fibo2=1;
+      document.write(fibo1 +"<br/>");
+      document.write(fibo2 +"<br/>");  
+      for(let k=1; k<40; k++)
+      {
+       fibo3=fibo1+fibo2;
+       fibo1=fibo2;
+       fibo2=fibo3;
+       document.write(fibo3 +"<br/> <br/>"); 
+      }
+
+      // Swap  with third variable
+
+    //   var a1=prompt("Enter the First Number");
+    //   var a2=prompt("Enter the Second Number");
+    //   document.write("Before Swaping <br/>");
+    //   document.write("The value for a is"+a1+"and value for b is "+a2 +"<br/>");
+    //   var a3=a1;
+    //   a1=a2;
+    //   a2=a3;
+    //   document.write("After Swaping <br/>");
+    //   document.write("The value for a is"+a1+"and value for b is "+a2 +"<br/>");
+
+
+    //   var a1=prompt("Enter the First Number");
+    //   var a2=prompt("Enter the Second Number");
+    //   document.write("Before Swaping <br/>");
+    //   document.write("The value for a is"+a1+"and value for b is "+a2 +"<br/>");
+    //   a1=a1+a2;
+    //   a2=a1-a2;
+    //   a1=a1-a2;
+    //   document.write("After Swaping <br/>");
+    //   document.write("The value for a is"+a1+"and value for b is "+a2 +"<br/>");
+
+// Sorting
+
+var a1=prompt("Enter the First Number");
+var a2=prompt("Enter the Second Number");
+var a3=prompt("Enter the third Number");
+
+if(a1>a2)
+{
+    if(a2>a3)
+    {
+
+    }
+    else if(a3>a1)
+    {
+        a1=a3;
+        a2=a3;
+        a3=a2;
+
+    }
+}
+else if(a2>a1)
+{
+   if(a2>a3 )
+   {
+    
+    if(a1>a3)
+    {
+        a2=a1;
+    }
+    else{
+        
+    }
+    a1=a2;
+   }  
+}
+
+
+
+    //  while(k<20)
+    //  {
+
+    //  }
+
+    // do{
+
+    // }while(k<20)
+
+    </script>
+</head>
+
+</html>

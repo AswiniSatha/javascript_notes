@@ -1,0 +1,16 @@
+#imgtoggle
+{
+    width:200px;
+    height:200px;
+    /* background-color: aqua; */
+}
+.offbulb
+{
+    background-color:blue;
+    /* background-image: url('https://www.kindpng.com/picc/m/99-999603_png-light-bulb-off-transparent-png.png'); */
+}
+.onbulb                   
+{
+    background-color: yellowgreen;
+    /* background-image: url('https://toppng.com/public/uploads/preview/light-bulb-on-off-png-11553940319kdxsp3rf0i.png'); */
+}
